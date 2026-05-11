@@ -1,0 +1,8 @@
+{
+  "from": "client@example.com",
+  "to": "me@example.com",
+  "subject": "Meeting request for next week",
+  "body": "Hi, I'd like to schedule a meeting next Tuesday at 3pm to discuss the project timeline. Please let me know if that works for you. Also, we need to finalize the budget before the end of the month.\n\nBest regards\nJohn",
+  "date": "2026-01-15T10:30:00Z",
+  "html_body": "<p>Hi, I'd like to schedule a meeting next Tuesday at 3pm to discuss the project timeline.</p><p>Please let me know if that works for you.</p><p>Best regards</p><p>John</p>"
+}

@@ -1,0 +1,9 @@
+Subject: Re: {{ subject }}
+
+Hi {{ sender }},
+
+Thank you for your email. I've received your message and will review it shortly.
+
+I'll get back to you with a detailed response within 24 hours.
+
+Best regards
