@@ -26,7 +26,7 @@ def test_email_parser_from_json():
 
 def test_email_parser_from_file():
     """Test parsing email from file"""
-    email = EmailParser.from_file("demo_email.json")
+    email = EmailParser.from_file(os.path.join(os.path.dirname(__file__), "..", "demo_email.json"))
     assert email.from_email == "client@example.com"
     assert email.subject == "Meeting request for next week"
     print("PASS: from_file")

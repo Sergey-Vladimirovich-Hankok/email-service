@@ -25,15 +25,12 @@ class Config:
         """Check if Ollama is running and model is available"""
         import httpx
         try:
-            async def check():
-                async with httpx.AsyncClient(timeout=5.0) as client:
-                    r = await client.get(f"{self.OLLAMA_HOST}/api/tags")
-                    r.raise_for_status()
-                    models = r.json().get("models", [])
-                    model_names = [m["name"] for m in models]
-                    return self.OLLAMA_MODEL in model_names
-            import asyncio
-            return asyncio.run(check())
+            with httpx.Client(timeout=5.0) as client:
+                r = client.get(f"{self.OLLAMA_HOST}/api/tags")
+                r.raise_for_status()
+                models = r.json().get("models", [])
+                model_names = [m["name"] for m in models]
+                return self.OLLAMA_MODEL in model_names
         except Exception:
             return False
 
